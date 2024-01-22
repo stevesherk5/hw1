@@ -271,13 +271,6 @@ VALUES (
 (
     "The Dark Knight",
     2,
-    "Christian Bale",
-    1,
-    "Bruce Wayne"
-),
-(
-    "The Dark Knight",
-    2,
     "Heath Ledger",
     6,
     "Joker"
