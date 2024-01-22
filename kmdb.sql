@@ -182,6 +182,163 @@ VALUES (
     1
 );
 
+INSERT INTO actors(
+    name
+)
+VALUES (
+    "Christian Bale"
+),
+(
+    "Michael Caine"
+),
+(
+    "Liam Nesson"
+),
+(
+    "Katie Holmes"
+),
+(
+    "Gary Oldman"
+),
+(
+    "Heath Ledger"
+),
+(
+    "Aaron Eckhart"
+),
+(
+    "Maggie Gyllenhaal"
+),
+(
+    "Tom Hardy"
+),
+(
+    "Joseph Gordon-Levitt"
+),
+(
+    "Anne Hathaway"
+);
+
+INSERT INTO roles (
+    movie,
+    movie_id,
+    actor,
+    actor_id,
+    character
+)
+VALUES (
+    "Batman Begins",
+    1,
+    "Christian Bale",
+    1,
+    "Bruce Wayne"
+),
+(
+    "Batman Begins",
+    1,
+    "Michael Caine",
+    2,
+    "Alfred"
+),
+(
+    "Batman Begins",
+    1,
+    "Liam Nesson",
+    3,
+    "Ra's Al Ghul"
+),
+(
+    "Batman Begins",
+    1,
+    "Katie Holmes",
+    4,
+    "Rachel Dawes"
+),
+(
+    "Batman Begins",
+    1,
+    "Gary Oldman",
+    5,
+    "Commissioner Gordon"
+),
+(
+    "The Dark Knight",
+    2,
+    "Christian Bale",
+    1,
+    "Bruce Wayne"
+),
+(
+    "The Dark Knight",
+    2,
+    "Christian Bale",
+    1,
+    "Bruce Wayne"
+),
+(
+    "The Dark Knight",
+    2,
+    "Heath Ledger",
+    6,
+    "Joker"
+),
+(
+    "The Dark Knight",
+    2,
+    "Aaron Eckhart",
+    7,
+    "Harvey Dent"
+),
+(
+    "The Dark Knight",
+    2,
+    "Michael Caine",
+    2,
+    "Alfred"
+),
+(
+    "The Dark Knight",
+    2,
+    "Maggie Gyllenhaal",
+    8,
+    "Rachel Dawes"
+),
+(
+    "The Dark Knight Rises",
+    3,
+    "Christian Bale",
+    1,
+    "Bruce Wayne"
+),
+(
+    "The Dark Knight Rises",
+    3,
+    "Gary Oldman",
+    5,
+    "Commissioner Gordon"
+),
+(
+    "The Dark Knight Rises",
+    3,
+    "Tom Hardy",
+    9,
+    "Bane"
+),
+(
+    "The Dark Knight Rises",
+    3,
+    "Joseph Gordon-Levitt",
+    10,
+    "John Blake"
+),
+(
+    "The Dark Knight Rises",
+    3,
+    "Anne Hathaway",
+    11,
+    "Selina Kyle"
+);
+
 -- Prints a header for the movies output
 .print "Movies"
 .print "======"
@@ -190,12 +347,15 @@ VALUES (
 -- The SQL statement for the movies output
 -- TODO!
 
+SELECT movies.title, movies.year, movies.MPAA_Rating, movies.studio FROM movies;
+
 -- Prints a header for the cast output
 .print ""
 .print "Top Cast"
 .print "========"
 .print ""
 
-
 -- The SQL statement for the cast output
 -- TODO!
+
+SELECT roles.movie, roles.actor, roles.character FROM roles;
